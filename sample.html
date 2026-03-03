@@ -262,6 +262,31 @@
         }
         .comparison__cell svg.check { color: var(--color-primary); flex-shrink: 0; }
         .comparison__cell svg.cross { color: var(--color-text-light); flex-shrink: 0; }
+        /* Sticky proposal bar */
+        .proposal-sticky {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 90;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(16px) saturate(180%);
+            box-shadow: 0 -2px 20px rgba(0,0,0,0.08);
+            padding: 0.625rem 1.5rem;
+            padding-bottom: calc(0.625rem + env(safe-area-inset-bottom, 0px));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .proposal-sticky.is-visible { transform: translateY(0); }
+        .proposal-sticky .btn { font-size: var(--fs-sm); padding: 0.75rem 1.5rem; }
+        @media (max-width: 599px) {
+            .proposal-sticky { gap: 0.5rem; padding: 0.625rem 1rem; }
+            .proposal-sticky .btn { flex: 1; padding: 0.75rem 0.75rem; font-size: var(--fs-xs); }
+            body { padding-bottom: 68px; }
+        }
+
         @media (max-width: 599px) {
             .comparison__row { grid-template-columns: 1fr; }
             .comparison__row--header { display: none; }
@@ -436,6 +461,16 @@
                     <div class="comparison__cell"><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Prominent alongside your photo</div>
                 </div>
                 <div class="comparison__row">
+                    <div class="comparison__cell">SEO for local search</div>
+                    <div class="comparison__cell"><svg class="cross" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Minimal optimisation</div>
+                    <div class="comparison__cell"><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Built to rank for local terms</div>
+                </div>
+                <div class="comparison__row">
+                    <div class="comparison__cell">Google Ads compatible</div>
+                    <div class="comparison__cell"><svg class="cross" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> No landing pages</div>
+                    <div class="comparison__cell"><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ad-ready, high-converting structure</div>
+                </div>
+                <div class="comparison__row">
                     <div class="comparison__cell">StoryBrand messaging</div>
                     <div class="comparison__cell"><svg class="cross" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Not used</div>
                     <div class="comparison__cell"><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Full SB7 framework throughout</div>
@@ -585,12 +620,12 @@
                     <div class="scope__card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                     </div>
-                    <h3 class="scope__card-title">SEO &amp; Performance</h3>
+                    <h3 class="scope__card-title">SEO, Ads &amp; Performance</h3>
                     <ul class="scope__card-list">
                         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fast, lightweight code (no WordPress bloat)</li>
-                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> On-page SEO for local search terms</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> On-page SEO so you're found organically on Google for local search terms</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Google Ads ready &mdash; structured for high-converting landing pages if you run paid campaigns</li>
                         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mobile-first responsive design</li>
-                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Accessibility best practices (WCAG)</li>
                         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Google Business Profile integration</li>
                     </ul>
                 </div>
@@ -640,6 +675,15 @@
         </div>
     </section>
 
+    <!-- Sticky proposal bar -->
+    <div class="proposal-sticky" id="proposalSticky">
+        <a href="index.html" class="btn btn--primary">
+            View Homepage Demo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#next-steps" class="btn btn--accent">Let's Talk</a>
+    </div>
+
     <!-- Footer -->
     <div class="footer__bottom" style="background: var(--color-primary-deeper);">
         <div class="container footer__bottom-inner">
@@ -660,6 +704,19 @@
                 if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
             });
         });
+        /* Show sticky bar after scrolling past the hero */
+        var stickyBar = document.getElementById('proposalSticky');
+        if (stickyBar) {
+            var heroSection = document.querySelector('.proposal-hero');
+            if (heroSection && 'IntersectionObserver' in window) {
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        stickyBar.classList.toggle('is-visible', !entry.isIntersecting);
+                    });
+                }, { threshold: 0 });
+                obs.observe(heroSection);
+            }
+        }
     </script>
 </body>
 </html>
