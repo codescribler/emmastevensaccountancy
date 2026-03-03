@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page | Emma Stevens Accountancy</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sample-banner {
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+            color: #fff;
+            text-align: center;
+            padding: 0.625rem 1rem;
+            font-size: var(--fs-sm);
+            font-weight: 600;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+        }
+        .sample-banner a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+        .nav { top: 36px; }
+        .sample-page { min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10rem 1.5rem 5rem; background: var(--color-bg); }
+        .sample-page__inner { max-width: 560px; }
+        .sample-page__tag {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2.5px; color: var(--color-accent);
+            background: var(--color-accent-light); padding: 0.5rem 1.25rem;
+            border-radius: 50px; margin-bottom: var(--space-xl);
+        }
+        .sample-page__title {
+            font-family: var(--font-heading); font-size: clamp(var(--fs-3xl), 4vw, var(--fs-4xl));
+            font-weight: 700; line-height: var(--lh-heading);
+            margin-bottom: var(--space-lg); letter-spacing: -0.02em;
+        }
+        .sample-page__text { font-size: var(--fs-lg); color: var(--color-text-muted); line-height: 1.75; margin-bottom: var(--space-2xl); }
+    </style>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="sample-banner">
+        This is a sample page for demonstration purposes. <a href="index.html">Return to homepage</a>
+    </div>
+
+    <header class="nav nav--scrolled" id="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Emma Stevens Accountancy - Home">
+                <span class="nav__logo-icon">ES</span>
+                <span class="nav__logo-text" style="color: var(--color-text);">Emma Stevens<span class="nav__logo-sub">Accountancy</span></span>
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span style="background: var(--color-text);"></span>
+                <span style="background: var(--color-text);"></span>
+                <span style="background: var(--color-text);"></span>
+            </button>
+            <nav class="nav__menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <a href="index.html#services" class="nav__link">Services</a>
+                <a href="index.html#guide" class="nav__link">About</a>
+                <a href="index.html#testimonials" class="nav__link">Testimonials</a>
+                <a href="sample.html" class="nav__link">Contact</a>
+                <a href="index.html#book" class="nav__cta">Book Your Free Consultation</a>
+                <div class="nav__mobile-contact">
+                    <a href="tel:01442831462" class="nav__phone">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        01442 831462
+                    </a>
+                    <a href="mailto:emma@emmastevensaccountancy.co.uk" class="nav__email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        emma@emmastevensaccountancy.co.uk
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="sample-page">
+        <div class="sample-page__inner">
+            <span class="sample-page__tag">Sample Page</span>
+            <h1 class="sample-page__title">This Page Is a Placeholder</h1>
+            <p class="sample-page__text">In the full website, this would be a dedicated inner page with content tailored to its purpose &mdash; whether that's a services breakdown, contact form, blog articles, or FAQs. The final site design will carry through the same premium look and feel.</p>
+            <a href="index.html" class="btn btn--primary btn--lg">Back to the Homepage</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand">
+                        <span class="nav__logo-icon">ES</span>
+                        <span class="footer__brand-name">Emma Stevens<br>Accountancy Ltd</span>
+                    </div>
+                    <address class="footer__address">Office 1, Torrington Farm,<br>Grove Lane, Chesham,<br>Bucks HP5 3QG</address>
+                    <div class="footer__contact-row"><a href="tel:01442831462" class="footer__link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 01442 831462</a></div>
+                    <div class="footer__contact-row"><a href="mailto:emma@emmastevensaccountancy.co.uk" class="footer__link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> emma@emmastevensaccountancy.co.uk</a></div>
+                    <p class="footer__hours">Monday &ndash; Friday, 9am &ndash; 5pm</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#guide">About Emma</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="sample.html">Articles and Guides</a></li>
+                        <li><a href="sample.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Legal &amp; Social</h4>
+                    <ul class="footer__links">
+                        <li><a href="sample.html">Privacy Notice</a></li>
+                        <li><a href="sample.html">Terms of Engagement</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--cta">
+                    <h4 class="footer__heading">Ready to get started?</h4>
+                    <p class="footer__cta-text">Take the stress out of your accounts today.</p>
+                    <a href="index.html#book" class="btn btn--primary btn--full">Book Your Free Consultation</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>&copy; 2026 Emma Stevens Accountancy Ltd. Company No. 07666723. Registered in England and Wales.</p>
+                <p>Website by <a href="sample.html" class="footer__dreamfree">Dreamfree</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var t = document.getElementById('navToggle'), m = document.getElementById('navMenu');
+        if (t && m) { t.addEventListener('click', function () { var o = m.classList.toggle('is-open'); t.setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; }); m.querySelectorAll('a').forEach(function (l) { l.addEventListener('click', function () { m.classList.remove('is-open'); t.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }); }); }
+    </script>
+</body>
+</html>
